@@ -1,229 +1,410 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop Bán Acc Game Uy Tín</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop Acc Game Uy Tín</title>
   <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
-    body {font-family: 'Segoe UI', sans-serif; background:#f5f5f5; color:#333;}
-
-    header {
-      aspect-ratio: 21 / 9;
-      width: 100%;
-      background: url(' https://i.ibb.co/7t82tY25/ANH-CODE-0-BPHZ-2.jpg') no-repeat center center/cover;
-    }
-
-    nav {background:#222; display:flex; justify-content:center; position:sticky; top:0; z-index:100;}
-    nav a {
-      color:white; padding:14px 20px; text-decoration:none; transition:0.3s;
-      cursor:pointer;
-    }
-    nav a:hover, nav a.active {background:#ff6600;}
-
-    .main-title {text-align:center; padding:30px 10px; background:white;}
-    .main-title h1 {font-size:2.5rem; color:#ff6600; margin-bottom:10px;}
-    .main-title p {font-size:1.2rem; color:#333;}
-
-    .container {padding:50px 8%; display:none;}
-    .active-section {display:block;}
-
-    .section-title {
-      display:flex; align-items:center; gap:10px;
-      font-size:2rem; border-left:6px solid #ff6600;
-      padding-left:10px; margin:25px 0;
-    }
-    .logo-title {width:40px; height:40px; object-fit:contain;}
-
-    .grid {display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:25px;}
-    .card {
-      position: relative;
-      background:white; border-radius:12px; overflow:hidden;
-      box-shadow:0 4px 12px rgba(0,0,0,0.2); text-align:center;
-      transition:transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {transform:translateY(-6px); box-shadow:0 6px 16px rgba(0,0,0,0.3);}
-    .card img {width:100%; height:180px; object-fit:cover;}
-    .card h3 {margin:15px 0 10px;}
-    .price {color:red; font-weight:bold; margin:10px 0;}
-    .btn {
-      display:inline-block; background:#ff6600; color:white;
-      padding:10px 20px; margin:15px 0; border-radius:6px;
-      text-decoration:none; transition:0.3s;
-    }
-    .btn:hover {background:#e65c00;}
-
-    .code {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      font-size: 0.9rem;
-      padding: 4px 8px;
-      border-radius: 6px;
-    }
-
-    .messenger-btn {
-      position:fixed; bottom:20px; right:20px;
-      width:60px; height:60px; border-radius:50%;
-      overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.3);
-      z-index:999; animation:pulse 1.5s infinite;
-    }
-    .messenger-btn img {width:100%; height:100%; display:block;}
-    @keyframes pulse {0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}
-
-    .petal {
-      position:fixed; top:-50px; width:25px; height:25px;
-      background-image:url('https://i.ibb.co/ZzQ5ZKRR/Pngtree-blooming-pink-peach-blossom-5414302.png');
-      background-size:cover; opacity:0.9; pointer-events:none;
-      animation:fall linear forwards; z-index:99;
-    }
-    @keyframes fall {to {transform:translateY(110vh) rotate(360deg); opacity:0;}}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background:#f6f7fb;color:#222;line-height:1.4}
+    header{background:#111;color:#fff;padding:28px 16px;text-align:center}
+    header h1{font-size:1.6rem;color:#ff6a00;margin-bottom:6px}
+    header p{opacity:.9;font-size:.95rem}
+    nav{display:flex;gap:8px;justify-content:center;padding:12px 8px;background:#1f1f1f;position:sticky;top:0;z-index:50}
+    nav button{background:transparent;border:0;color:#fff;padding:10px 14px;border-radius:8px;cursor:pointer}
+    nav button.active, nav button:hover{background:#ff6a00}
+    .hero{padding:22px 16px;text-align:center}
+    .wrap{max-width:1200px;margin:0 auto;padding:18px}
+    .section-title{display:flex;align-items:center;gap:10px;font-size:1.2rem;margin:10px 0 16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+    .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(15,15,15,0.06);text-align:center;padding-bottom:14px;position:relative}
+    .card img{width:100%;height:150px;object-fit:cover;display:block}
+    .code{position:absolute;left:10px;top:10px;background:rgba(0,0,0,0.6);color:#fff;padding:6px 8px;border-radius:8px;font-size:0.85rem}
+    .card h3{font-size:1rem;margin:12px 12px 6px}
+    .card p{font-size:0.9rem;color:#555;margin:0 12px}
+    .price{color:#d32f2f;font-weight:700;margin:8px 12px}
+    .btn{display:inline-block;margin-top:10px;padding:10px 18px;border-radius:999px;background:#ff6a00;color:#fff;text-decoration:none;font-weight:600}
+    .btn:hover{opacity:0.95}
+    .hidden{display:none}
+    footer{padding:18px;text-align:center;color:#666;font-size:0.9rem}
+    /* responsive tweaks */
+    @media (max-width:480px){.card img{height:130px}.grid{gap:12px}}
   </style>
 </head>
 <body>
+  <header>
+    <h1>Shop Acc Game Uy Tín</h1>
+    <p>Liên Quân • Free Fire — An toàn • Nhanh chóng • Giá tốt</p>
+  </header>
 
-<header></header>
+  <nav>
+    <button class="tab-btn active" data-target="all">Tất cả</button>
+    <button class="tab-btn" data-target="lq">Liên Quân (17)</button>
+    <button class="tab-btn" data-target="ff">Free Fire (15)</button>
+    <button class="tab-btn" data-target="guide">Hướng dẫn</button>
+  </nav>
 
-<section class="main-title">
-  <h1>Shop Acc Game Uy Tín</h1>
-  <p>Liên Quân - Free Fire - Giá Rẻ - An Toàn 100%</p>
-</section>
+  <main class="wrap">
+    <section id="all" class="tab-section">
+      <div class="section-title">📦 Tất cả sản phẩm</div>
+      <!-- Grid chứa tất cả 32 acc -->
+      <div class="grid" id="grid-all">
 
-<nav>
-  <a class="tab-link active" data-target="trangchu">Trang Chủ</a>
-  <a class="tab-link" data-target="lienquan">Nick Liên Quân</a>
-  <a class="tab-link" data-target="freefire">Nick Free Fire</a>
-  <a class="tab-link" data-target="huongdan">Hướng Dẫn Mua Nick</a>
-</nav>
+        <!-- ======= 17 Nick Liên Quân ======= -->
+        <div class="card" data-type="lq">
+          <div class="code">#LQ001</div>
+          <img src="https://i.ibb.co/rGx1c4gP/Anh-show-acc-lien-quan.webp" alt="Nick LQ001">
+          <h3>Nick LQ 1</h3>
+          <p>Nick ngon giá rẻ</p>
+          <div class="price">300k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-<!-- Trang Chủ -->
-<div class="container active-section" id="trangchu">
-  <h2 class="section-title">📌 Chào mừng đến với Shop!</h2>
-  <p style="margin-bottom:20px;">Chọn danh mục bạn muốn xem:</p>
+        <div class="card" data-type="lq">
+          <div class="code">#LQ002</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ002">
+          <h3>Nick LQ 2</h3>
+          <p>Full Tướng</p>
+          <div class="price">500k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-  <div class="grid">
-    <div class="card">
-      <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg">
-      <h3>Nick Liên Quân</h3>
-      <p>Xem danh sách nick Liên Quân VIP.</p>
-      <a class="btn tab-link" data-target="lienquan">Xem Nick Liên Quân</a>
-    </div>
-    <div class="card">
-      <img src="https://i.ibb.co/GJqgCMR/ff.jpg">
-      <h3>Nick Free Fire</h3>
-      <p>Xem danh sách nick Free Fire giá rẻ.</p>
-      <a class="btn tab-link" data-target="freefire">Xem Nick Free Fire</a>
-    </div>
-    <div class="card">
-      <img src="https://i.ibb.co/5Mbn9tH/guide-icon.png">
-      <h3>Hướng dẫn mua nick</h3>
-      <p>Xem chi tiết cách mua nick tại shop.</p>
-      <a class="btn tab-link" data-target="huongdan">Xem Hướng Dẫn</a>
-    </div>
-  </div>
-</div>
+        <div class="card" data-type="lq">
+          <div class="code">#LQ003</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ003">
+          <h3>Nick LQ 3</h3>
+          <p>Nhiều Skin</p>
+          <div class="price">400k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-<!-- Nick Liên Quân -->
-<div class="container" id="lienquan">
-  <h2 class="section-title">
-    <img src="https://i.ibb.co/ymSGwT81/unnamed.png" class="logo-title"> Nick Liên Quân
-  </h2>
-  <div class="grid">
-    <!-- 17 nick Liên Quân -->
-    <div class="card"><div class="code">#LQ001</div><img src=" https://i.ibb.co/rGx1c4gP/Anh-show-acc-lien-quan.webp"><h3>Nick LQ 1</h3><p>nick ngon giá rẻ</p><p class="price">300k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ002</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 2</h3><p>Full Tướng</p><p class="price">500k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ003</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 3</h3><p>Nhiều Skin</p><p class="price">400k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ004</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 4</h3><p>Rank Kim Cương</p><p class="price">250k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ005</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 5</h3><p>Full Ngọc</p><p class="price">600k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ006</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 6</h3><p>VIP</p><p class="price">800k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ007</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 7</h3><p>Rank Tinh Anh</p><p class="price">200k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ008</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 8</h3><p>Nhiều Skin Hiếm</p><p class="price">700k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ009</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 9</h3><p>Rank Cao Thủ</p><p class="price">350k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ010</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 10</h3><p>Full Skin SS</p><p class="price">1.000k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ011</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 11</h3><p>Tài Khoản VIP</p><p class="price">900k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ012</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 12</h3><p>Nhiều Tướng Hiếm</p><p class="price">750k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ013</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 13</h3><p>Rank Cao</p><p class="price">400k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ014</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 14</h3><p>Acc Cày Thuê</p><p class="price">150k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ015</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 15</h3><p>Acc Sưu Tầm</p><p class="price">1.200k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ016</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 16</h3><p>Full Skin SSS</p><p class="price">2.000k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#LQ017</div><img src="https://i.ibb.co/xGQ5Rjq/lq.jpg"><h3>Nick LQ 17</h3><p>Acc VIP Đặc Biệt</p><p class="price">3.000k</p><a href="#" class="btn">Mua Ngay</a></div>
-  </div>
-</div>
+        <div class="card" data-type="lq">
+          <div class="code">#LQ004</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ004">
+          <h3>Nick LQ 4</h3>
+          <p>Rank Kim Cương</p>
+          <div class="price">250k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-<!-- Nick Free Fire -->
-<div class="container" id="freefire">
-  <h2 class="section-title">
-    <img src="https://i.ibb.co/r2gXYbwm/images.jpg" class="logo-title"> Nick Free Fire
-  </h2>
-  <div class="grid">
-    <!-- 15 nick Free Fire -->
-    <div class="card"><div class="code">#FF001</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 1</h3><p>Level 65</p><p class="price">250k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF002</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 2</h3><p>Level 70</p><p class="price">450k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF003</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 3</h3><p>Nhiều Skin Súng</p><p class="price">500k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF004</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 4</h3><p>Full Hành Động</p><p class="price">350k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF005</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 5</h3><p>VIP</p><p class="price">700k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF006</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 6</h3><p>Súng Evo</p><p class="price">1.000k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF007</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 7</h3><p>Level 60</p><p class="price">200k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF008</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 8</h3><p>Nhiều Hộp Skin</p><p class="price">550k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF009</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 9</h3><p>Level 75</p><p class="price">650k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF010</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 10</h3><p>Siêu VIP</p><p class="price">1.200k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF011</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 11</h3><p>Nhiều Pet</p><p class="price">400k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF012</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 12</h3><p>Acc VIP</p><p class="price">800k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF013</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 13</h3><p>Nhiều Skin Hiếm</p><p class="price">1.500k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF014</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 14</h3><p>Acc Đặc Biệt</p><p class="price">2.000k</p><a href="#" class="btn">Mua Ngay</a></div>
-    <div class="card"><div class="code">#FF015</div><img src="https://i.ibb.co/GJqgCMR/ff.jpg"><h3>Nick FF 15</h3><p>Acc Sưu Tầm</p><p class="price">3.000k</p><a href="#" class="btn">Mua Ngay</a></div>
-  </div>
-</div> <!-- ✅ đóng Free Fire -->
+        <div class="card" data-type="lq">
+          <div class="code">#LQ005</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ005">
+          <h3>Nick LQ 5</h3>
+          <p>Full Ngọc</p>
+          <div class="price">600k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-<!-- Hướng dẫn -->
-<div class="container" id="huongdan">
-  <h2 class="section-title">
-    <img src="https://i.ibb.co/5Mbn9tH/guide-icon.png" class="logo-title"> Hướng Dẫn Mua Nick
-  </h2>
-  <div style="background:white; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.2); line-height:1.6;">
-    <p><b>Bước 1:</b> Chọn nick bạn muốn mua.</p>
-    <p><b>Bước 2:</b> Bấm nút <span style="color:red;font-weight:bold;">Mua Ngay</span>.</p>
-    <p><b>Bước 3:</b> Gửi mã số nick cho admin qua Facebook.</p>
-    <p><b>Bước 4:</b> Thanh toán & nhận tài khoản qua tin nhắn.</p>
-    <p style="margin-top:15px; color:#ff6600; font-weight:bold;">✔ An toàn - Uy tín - Nhanh chóng!</p>
-  </div>
-</div>
+        <div class="card" data-type="lq">
+          <div class="code">#LQ006</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ006">
+          <h3>Nick LQ 6</h3>
+          <p>VIP</p>
+          <div class="price">800k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-<a href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" class="messenger-btn">
-  <img src="https://i.ibb.co/ksCbpSyK/istockphoto-1364015241-612x612.jpg">
-</a>
+        <div class="card" data-type="lq">
+          <div class="code">#LQ007</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ007">
+          <h3>Nick LQ 7</h3>
+          <p>Rank Tinh Anh</p>
+          <div class="price">200k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-<script>
-  // Tab navigation
-  const tabs = document.querySelectorAll(".tab-link");
-  const sections = document.querySelectorAll(".container");
+        <div class="card" data-type="lq">
+          <div class="code">#LQ008</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ008">
+          <h3>Nick LQ 8</h3>
+          <p>Nhiều Skin Hiếm</p>
+          <div class="price">700k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      tabs.forEach(t => t.classList.remove("active"));
-      sections.forEach(s => s.classList.remove("active-section"));
-      tab.classList.add("active");
-      document.getElementById(tab.dataset.target).classList.add("active-section");
+        <div class="card" data-type="lq">
+          <div class="code">#LQ009</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ009">
+          <h3>Nick LQ 9</h3>
+          <p>Rank Cao Thủ</p>
+          <div class="price">350k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ010</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ010">
+          <h3>Nick LQ 10</h3>
+          <p>Full Skin SS</p>
+          <div class="price">1.000k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ011</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ011">
+          <h3>Nick LQ 11</h3>
+          <p>Tài Khoản VIP</p>
+          <div class="price">900k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ012</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ012">
+          <h3>Nick LQ 12</h3>
+          <p>Nhiều Tướng Hiếm</p>
+          <div class="price">750k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ013</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ013">
+          <h3>Nick LQ 13</h3>
+          <p>Rank Cao</p>
+          <div class="price">400k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ014</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ014">
+          <h3>Nick LQ 14</h3>
+          <p>Acc Cày Thuê</p>
+          <div class="price">150k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ015</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ015">
+          <h3>Nick LQ 15</h3>
+          <p>Acc Sưu Tầm</p>
+          <div class="price">1.200k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ016</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ016">
+          <h3>Nick LQ 16</h3>
+          <p>Full Skin SSS</p>
+          <div class="price">2.000k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ017</div>
+          <img src="https://i.ibb.co/xGQ5Rjq/lq.jpg" alt="Nick LQ017">
+          <h3>Nick LQ 17</h3>
+          <p>Acc VIP Đặc Biệt</p>
+          <div class="price">3.000k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <!-- ======= 15 Nick Free Fire ======= -->
+        <div class="card" data-type="ff">
+          <div class="code">#FF001</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF001">
+          <h3>Nick FF 1</h3>
+          <p>Level 65</p>
+          <div class="price">250k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF002</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF002">
+          <h3>Nick FF 2</h3>
+          <p>Level 70</p>
+          <div class="price">450k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF003</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF003">
+          <h3>Nick FF 3</h3>
+          <p>Nhiều Skin Súng</p>
+          <div class="price">500k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF004</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF004">
+          <h3>Nick FF 4</h3>
+          <p>Full Hành Động</p>
+          <div class="price">350k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF005</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF005">
+          <h3>Nick FF 5</h3>
+          <p>VIP</p>
+          <div class="price">700k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF006</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF006">
+          <h3>Nick FF 6</h3>
+          <p>Súng Evo</p>
+          <div class="price">1.000k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF007</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF007">
+          <h3>Nick FF 7</h3>
+          <p>Level 60</p>
+          <div class="price">200k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF008</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF008">
+          <h3>Nick FF 8</h3>
+          <p>Nhiều Hộp Skin</p>
+          <div class="price">550k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF009</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF009">
+          <h3>Nick FF 9</h3>
+          <p>Level 75</p>
+          <div class="price">650k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF010</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF010">
+          <h3>Nick FF 10</h3>
+          <p>Siêu VIP</p>
+          <div class="price">1.200k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF011</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF011">
+          <h3>Nick FF 11</h3>
+          <p>Nhiều Pet</p>
+          <div class="price">400k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF012</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF012">
+          <h3>Nick FF 12</h3>
+          <p>Acc VIP</p>
+          <div class="price">800k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF013</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF013">
+          <h3>Nick FF 13</h3>
+          <p>Nhiều Skin Hiếm</p>
+          <div class="price">1.500k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF014</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF014">
+          <h3>Nick FF 14</h3>
+          <p>Acc Đặc Biệt</p>
+          <div class="price">2.000k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF015</div>
+          <img src="https://i.ibb.co/GJqgCMR/ff.jpg" alt="Nick FF015">
+          <h3>Nick FF 15</h3>
+          <p>Acc Sưu Tầm</p>
+          <div class="price">3.000k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="lq" class="tab-section hidden">
+      <div class="section-title">🎯 Danh sách Nick Liên Quân</div>
+      <div class="grid" id="grid-lq">
+        <!-- Duplicate the 17 LQ cards here (or we will filter by script). -->
+      </div>
+    </section>
+
+    <section id="ff" class="tab-section hidden">
+      <div class="section-title">🔥 Danh sách Nick Free Fire</div>
+      <div class="grid" id="grid-ff">
+        <!-- Duplicate the 15 FF cards here (or we will filter by script). -->
+      </div>
+    </section>
+
+    <section id="guide" class="tab-section hidden">
+      <div class="section-title">📘 Hướng dẫn mua nick</div>
+      <div style="background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,15,15,0.05)">
+        <p><strong>Bước 1:</strong> Chọn nick (hoặc bấm Mua Ngay).</p>
+        <p><strong>Bước 2:</strong> Gửi mã số nick cho admin qua Facebook.</p>
+        <p><strong>Bước 3:</strong> Thanh toán theo hướng dẫn admin & nhận tài khoản.</p>
+        <p style="color:#ff6a00;margin-top:8px;font-weight:700">Lưu ý: Luôn check kỹ mô tả trước khi mua.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© Shop Acc Game — Liên hệ: Facebook (nhấn Mua Ngay)</footer>
+
+  <!-- Messenger / FB quick button -->
+  <a href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener" style="position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.2);z-index:120">
+    <img src="https://i.ibb.co/ksCbpSyK/istockphoto-1364015241-612x612.jpg" alt="FB" style="width:100%;height:100%;object-fit:cover;display:block">
+  </a>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.tab-section');
+    tabs.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        tabs.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.dataset.target;
+        sections.forEach(s=>{
+          if(s.id === target) s.classList.remove('hidden');
+          else s.classList.add('hidden');
+        });
+        // if target is lq or ff we can filter the main grid into those sections for faster rendering
+        if(target === 'lq' || target === 'ff'){
+          // fill the specific grid by cloning from the full grid (only once)
+          const allCards = document.querySelectorAll('#grid-all .card');
+          const gridTarget = document.getElementById('grid-' + target);
+          if(gridTarget && gridTarget.children.length === 0){
+            allCards.forEach(c=>{
+              if(c.dataset.type === target){
+                gridTarget.appendChild(c.cloneNode(true));
+              }
+            });
+          }
+        }
+      });
     });
-  });
 
-  // Hiệu ứng hoa anh đào
-  function createPetal() {
-    const petal = document.createElement("div");
-    petal.classList.add("petal");
-    petal.style.left = Math.random() * window.innerWidth + "px";
-    const duration = 6 + Math.random() * 5;
-    petal.style.animationDuration = duration + "s";
-    const size = 15 + Math.random() * 20;
-    petal.style.width = size + "px";
-    petal.style.height = size + "px";
-    document.body.appendChild(petal);
-    setTimeout(() => {petal.remove();}, duration * 1000);
-  }
-  setInterval(createPetal, 400);
-</script>
-
+    // Ensure "All" visible by default (already default in HTML)
+  </script>
 </body>
 </html>
