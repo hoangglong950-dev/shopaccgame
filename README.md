@@ -4,7 +4,7 @@ Chào mừng bạn đến với **Shop Acc Game Uy Tín**!
 Tại đây bạn có thể tham khảo và mua acc **Liên Quân** & **Free Fire** với giá rẻ và an toàn 💯.  
 
 ## 🌐 Website chính thức
-👉 [Xem ngay tại đây](https://hoanglong9.github.io/shopaccgame/)
+👉 [Xem ngay tại đây](https://nickgame.run.place/)
 
 ## 📌 Danh mục
 - 🔥 Nick Free Fire (VIP, nhiều skin, giá rẻ)  
