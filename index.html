@@ -13,12 +13,12 @@
     nav{display:flex;gap:8px;justify-content:center;padding:12px 8px;background:#1f1f1f;position:sticky;top:0;z-index:50}
     nav button{background:transparent;border:0;color:#fff;padding:10px 14px;border-radius:8px;cursor:pointer}
     nav button.active, nav button:hover{background:#ff6a00}
-    .hero{padding:22px 16px;text-align:center}
     .wrap{max-width:1200px;margin:0 auto;padding:18px}
     .section-title{display:flex;align-items:center;gap:10px;font-size:1.2rem;margin:10px 0 16px}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
     .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(15,15,15,0.06);text-align:center;padding-bottom:14px;position:relative}
-    .card img{width:100%;height:150px;object-fit:cover;display:block}
+    .card img{width:100%;height:150px;object-fit:cover;display:block;cursor:pointer;transition:transform .2s}
+    .card img:hover{transform:scale(1.05)}
     .code{position:absolute;left:10px;top:10px;background:rgba(0,0,0,0.6);color:#fff;padding:6px 8px;border-radius:8px;font-size:0.85rem}
     .card h3{font-size:1rem;margin:12px 12px 6px}
     .card p{font-size:0.9rem;color:#555;margin:0 12px}
@@ -27,13 +27,403 @@
     .btn:hover{opacity:0.95}
     .hidden{display:none}
     footer{padding:18px;text-align:center;color:#666;font-size:0.9rem}
-    /* responsive tweaks */
     @media (max-width:480px){.card img{height:130px}.grid{gap:12px}}
+
+    /* Modal Zoom */
+    .modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.8);justify-content:center;align-items:center}
+    .modal img{max-width:90%;max-height:90%;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+    .modal .close{position:absolute;top:20px;right:35px;font-size:40px;color:#fff;cursor:pointer;font-weight:bold}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Shop Acc Game Uy Tín</h1>
+ <header>
+  <img src="https://i.ibb.co/zqTdyPN/Picsart-25-09-11-06-36-35-284.png" alt="Logo Shop" style="max-width:400px; height:auto;">
+</header>
+
+<nav>
+  <button class="tab-btn" data-target="all">Tất cả</button>
+  <button class="tab-btn" data-target="lq">Liên Quân (17)</button>
+  <button class="tab-btn" data-target="ff">Free Fire (15)</button>
+  <button class="tab-btn" data-target="guide">Hướng dẫn</button>
+</nav>
+
+
+  <main class="wrap">
+    <section id="all" class="tab-section">
+      <div class="section-title">📦 Tất cả sản phẩm</div>
+      <div class="grid" id="grid-all">
+
+                <!-- ======= 17 Nick Liên Quân ======= -->
+        <div class="card" data-type="lq">
+          <div class="code">#LQ001</div>
+          <img src="https://i.ibb.co/vxvd49fN/Picsart-25-09-11-07-10-57-437.png" alt="Nick LQ001">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Elsu,Triệu Vân,Murad</p>
+          <div class="price">150k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ002</div>
+          <img src="https://i.ibb.co/pvt0vdL3/Picsart-25-09-11-07-10-25-883.png" alt="Nick LQ002">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Raz,Vallhein</p>
+          <div class="price">100k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ003</div>
+          <img src="https://i.ibb.co/rGxsmPZy/Picsart-25-09-11-07-09-55-262.png" alt="Nick LQ003">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Raz,Zata</p>
+          <div class="price">100k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ004</div>
+          <img src="https://i.ibb.co/zL9DV5K/Picsart-25-09-11-07-08-56-530.png" alt="Nick LQ004">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Ngộ Không 2 skin</p>
+          <div class="price">80k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ005</div>
+          <img src=" https://i.ibb.co/nsmmz5mh/Picsart-25-09-11-07-08-25-660.png" alt="Nick LQ005">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Paine,Zata</p>
+          <div class="price">100k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ006</div>
+          <img src="https://i.ibb.co/pj4SMy0W/Picsart-25-09-11-07-07-59-769.png" alt="Nick LQ006">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Fennik,Vallhein</p>
+          <div class="price">90k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ007</div>
+          <img src=" https://i.ibb.co/WvvTFRWC/Picsart-25-09-11-07-07-34-107.png" alt="Nick LQ007">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Nakroth Lôi QS</p>
+          <div class="price">120k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ008</div>
+          <img src="https://i.ibb.co/ycsR1bZr/Picsart-25-09-11-07-07-05-679.png" alt="Nick LQ008">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Hayate Tử Thần VT</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ009</div>
+          <img src="https://i.ibb.co/GQknL36J/Picsart-25-09-11-07-06-37-831.png" alt="Nick LQ009">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Ryoma Samurai HT</p>
+          <div class="price">65k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ010</div>
+          <img src="https://i.ibb.co/TxPZ9Svy/Picsart-25-09-11-07-06-05-894.png" alt="Nick LQ010">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Valhein Đệ Nhất TT</p>
+          <div class="price">30k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ011</div>
+          <img src="https://i.ibb.co/PGpFRLgd/Picsart-25-09-11-07-09-26-681.png" alt="Nick LQ011">
+          <h3>Nick LQ</h3>
+          <p>Nick reg Veres,Bijan</p>
+          <div class="price">125k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ012</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick LQ012">
+          <h3>Túi Mù LQ 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ013</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick LQ012">
+          <h3>Túi Mù LQ 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ014</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick LQ012">
+          <h3>Túi Mù LQ 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ015</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick LQ012">
+          <h3>Túi Mù LQ 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ016</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick LQ012">
+          <h3>Túi Mù LQ 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="lq">
+          <div class="code">#LQ017</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick LQ012">
+          <h3>Túi Mù LQ 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <!-- ======= 15 Nick Free Fire ======= -->
+        <div class="card" data-type="ff">
+          <div class="code">#FF001</div>
+          <img src="https://i.ibb.co/gMWNZ0YM/Picsart-25-09-11-07-55-01-874.png" alt="Nick FF001">
+          <h3>Nick FF</h3>
+          <p>Nick Vip Như Hình</p>
+          <div class="price">400k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF002</div>
+          <img src="https://i.ibb.co/60rtMRSL/Picsart-25-09-11-07-54-27-943.png" alt="Nick FF002">
+          <h3>Nick FF</h3>
+          <p>Nick Vip Như Hình</p>
+          <div class="price">370k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF003</div>
+          <img src="https://i.ibb.co/CpZzsHTq/Picsart-25-09-11-07-54-03-602.png" alt="Nick FF003">
+          <h3>Nick FF</h3>
+          <p>Nick Vip Như Hình</p>
+          <div class="price">450k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF004</div>
+          <img src="https://i.ibb.co/wFKFVDf4/Picsart-25-09-11-07-53-34-783.png" alt="Nick FF004">
+          <h3>Nick FF</h3>
+          <p>Nick Tầm Trung Giá Rẻ</p>
+          <div class="price">150k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF005</div>
+          <img src="https://i.ibb.co/HDL0p09J/Picsart-25-09-11-07-53-10-373.png" alt="Nick FF005">
+          <h3>Nick FF</h3>
+          <p>Nick Tầm Trung Giá Rẻ</p>
+          <div class="price">140k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF006</div>
+          <img src="https://i.ibb.co/3yDgVQhw/Picsart-25-09-11-07-52-22-057.png" alt="Nick FF006">
+          <h3>Nick FF</h3>
+          <p>Nick Tầm Trung Giá Rẻ</p>
+          <div class="price">155k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF007</div>
+          <img src="https://i.ibb.co/84MfNtLM/Picsart-25-09-11-07-51-45-023.png" alt="Nick FF007">
+          <h3>Nick FF</h3>
+          <p>Nick Tầm Trung Giá Rẻ</p>
+          <div class="price">135k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF008</div>
+          <img src="https://i.ibb.co/FLT4jVJf/Picsart-25-09-11-07-51-17-982.png" alt="Nick FF008">
+          <h3>Nick FF</h3>
+          <p>Nick Tầm Trung Giá Rẻ</p>
+          <div class="price">120k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF009</div>
+          <img src=" https://i.ibb.co/FLT4jVJf/Picsart-25-09-11-07-51-17-982.png" alt="Nick FF009">
+          <h3>Nick FF</h3>
+          <p>Nick Giá Rẻ</p>
+          <div class="price">70k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF010</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick FF010">
+          <h3>Túi Mù FF 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF011</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick FF010">
+          <h3>Túi Mù FF 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF012</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick FF010">
+          <h3>Túi Mù FF 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF013</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick FF010">
+          <h3>Túi Mù FF 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF014</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick FF010">
+          <h3>Túi Mù FF 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+        <div class="card" data-type="ff">
+          <div class="code">#FF015</div>
+          <img src="https://i.ibb.co/99FYq3vD/Picsart-25-09-11-07-37-56-932.jpg" alt="Nick FF010">
+          <h3>Túi Mù FF 50k</h3>
+          <p>Tỉ Lệ Nổ Nick vip 40% | Nick Tầm Trung 60%</p>
+          <div class="price">50k</div>
+          <a class="btn" href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener">Mua Ngay</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="lq" class="tab-section hidden">
+      <div class="section-title">🎯 Danh sách Nick Liên Quân</div>
+      <div class="grid" id="grid-lq"></div>
+    </section>
+
+    <section id="ff" class="tab-section hidden">
+      <div class="section-title">🔥 Danh sách Nick Free Fire</div>
+      <div class="grid" id="grid-ff"></div>
+    </section>
+
+    <section id="guide" class="tab-section hidden">
+      <div class="section-title">📘 Hướng dẫn mua nick</div>
+      <div style="background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(15,15,15,0.05)">
+        <p><strong>Bước 1:</strong> Chọn nick (hoặc bấm Mua Ngay).</p>
+        <p><strong>Bước 2:</strong> Gửi mã số nick cho admin qua Facebook.</p>
+        <p><strong>Bước 3:</strong> Thanh toán theo hướng dẫn admin & nhận tài khoản.</p>
+        <p style="color:#ff6a00;margin-top:8px;font-weight:700">Lưu ý: Luôn check kỹ mô tả trước khi mua.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© Shop Acc Game — Liên hệ: Facebook (nhấn Mua Ngay)</footer>
+
+  <!-- Messenger / FB quick button -->
+  <a href="https://www.facebook.com/share/1BXJnREem2/" target="_blank" rel="noopener"
+     style="position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;overflow:hidden;
+            box-shadow:0 8px 20px rgba(0,0,0,.2);z-index:120">
+    <img src="https://i.ibb.co/ksCbpSyK/istockphoto-1364015241-612x612.jpg" alt="FB"
+         style="width:100%;height:100%;object-fit:cover;display:block">
+  </a>
+
+  <!-- Modal zoom ảnh -->
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImg" src="" alt="zoom">
+  </div>
+
+  <script>
+    // Tab switching
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.tab-section');
+    tabs.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        tabs.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.dataset.target;
+        sections.forEach(s=>{
+          if(s.id === target) s.classList.remove('hidden');
+          else s.classList.add('hidden');
+        });
+        if(target === 'lq' || target === 'ff'){
+          const allCards = document.querySelectorAll('#grid-all .card');
+          const gridTarget = document.getElementById('grid-' + target);
+          if(gridTarget && gridTarget.children.length === 0){
+            allCards.forEach(c=>{
+              if(c.dataset.type === target){
+                gridTarget.appendChild(c.cloneNode(true));
+              }
+            });
+          }
+        }
+      });
+    });
+
+    // Modal zoom ảnh
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    document.addEventListener("click", function(e){
+      if(e.target.tagName === "IMG" && e.target.closest(".card")){
+        modal.style.display = "flex";
+        modalImg.src = e.target.src;
+      }
+    });
+    function closeModal(){ modal.style.display="none"; }
+  </script>
+</body>
+</html>
     <p>Liên Quân • Free Fire — An toàn • Nhanh chóng • Giá tốt</p>
   </header>
 
